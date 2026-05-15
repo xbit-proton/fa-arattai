@@ -1,0 +1,39 @@
+/* * x0s ecosystem // fa-arattai v1.1.0
+ * Logic: Default (Blue), White (Contrast), and Bright (Glow)
+ */
+
+.fa-arattai {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    
+    /* MASK SETUP */
+    -webkit-mask-image: url('arattai-logo.png');
+    mask-image: url('arattai-logo.png');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    /* 1. DEFAULT STATE: Arattai Blue */
+    background-color: #007aff; 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. WHITE VARIANT: For Dark Mode and Light Mode backgrounds */
+.fa-arattai-white {
+    background-color: #ffffff !important;
+}
+
+/* 3. BRIGHT VARIANT: Blue with a technical glow */
+.fa-arattai-bright {
+    background-color: #007aff;
+    filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.8));
+}
+
+/* Hover refinement */
+.fa-arattai:hover {
+    transform: scale(1.1);
+}
