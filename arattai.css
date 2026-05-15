@@ -1,4 +1,9 @@
+/* * fa-arattai v1.3.0 
+ * Technical Vector Engine for x0s
+ */
+
 .fa-arattai {
+    /* Step 1: Set the size and position */
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -6,29 +11,28 @@
     position: relative;
     top: -1px;
     
-    /* SVG MASK ENGINE */
+    /* Step 2: The Stencil (Mask) 
+       This tells the browser: "Only show color where the SVG is solid" */
     -webkit-mask-image: url('arattai-logo.svg');
     mask-image: url('arattai-logo.svg');
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
 
-    /* DEFAULT: Arattai Blue */
+    /* Step 3: The Paint (Background Color)
+       By default, we "paint" the logo Arattai Blue */
     background-color: #007aff; 
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* WHITE MODE: For Dark/AMOLED interfaces */
+/* Step 4: Variations
+   When you add 'fa-arattai-white', we change the paint to white. */
 .fa-arattai-white {
     background-color: #ffffff !important;
 }
 
-/* GLOW MODE: Blue with high-quality vector glow */
-.fa-arattai-glow {
-    background-color: #007aff;
-    filter: drop-shadow(0 0 6px rgba(0, 122, 255, 0.8));
-}
-
+/* Step 5: Interactions
+   Makes the icon grow slightly when a user hovers over it. */
 .fa-arattai:hover {
     transform: scale(1.1);
 }
