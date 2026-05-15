@@ -1,7 +1,3 @@
-/* * fa-arattai v1.2.0 
- * x0s ecosystem // final distribution
- */
-
 .fa-arattai {
     display: inline-block;
     width: 1em;
@@ -9,24 +5,28 @@
     vertical-align: middle;
     position: relative;
     top: -1px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    
+    /* SVG MASK ENGINE */
+    -webkit-mask-image: url('arattai-logo.svg');
+    mask-image: url('arattai-logo.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    /* DEFAULT: Arattai Blue */
+    background-color: #007aff; 
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* BRIGHT MODE / DEFAULT: Use your real blue file */
-    background-image: url('arattai-logo(standard).png');
 }
 
-/* DARK MODE: Use the white file */
+/* WHITE MODE: For Dark/AMOLED interfaces */
 .fa-arattai-white {
-    background-image: url('arattai-logo.png') !important;
+    background-color: #ffffff !important;
 }
 
-/* GLOW STATE */
+/* GLOW MODE: Blue with high-quality vector glow */
 .fa-arattai-glow {
-    background-image: url('arattai-logo(standard).png');
-    filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.6));
+    background-color: #007aff;
+    filter: drop-shadow(0 0 6px rgba(0, 122, 255, 0.8));
 }
 
 .fa-arattai:hover {
