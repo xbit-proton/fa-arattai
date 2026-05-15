@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> // Arattai States</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/unknownxsuperman-prog/fa-arattai/arattai.css">
+
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        .pill-row {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 50px;
+            color: #888;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .pill:hover {
+            border-color: #333;
+            color: #fff;
+        }
+
+        .label {
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #007aff;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="label">Arattai Default</div>
+        <a href="#" class="pill">
+            <i class="fa-arattai"></i> 
+            <span>Standard Blue</span>
+        </a>
+    </div>
+
+    <div>
+        <div class="label">Contrast Mask</div>
+        <a href="#" class="pill">
+            <i class="fa-arattai fa-arattai-white"></i> 
+            <span>White Mask</span>
+        </a>
+    </div>
+
+    <div>
+        <div class="label">Bright / Glow</div>
+        <a href="#" class="pill">
+            <i class="fa-arattai fa-arattai-bright"></i> 
+            <span>Glow State</span>
+        </a>
+    </div>
+
+    <div style="font-size: 8px; opacity: 0.5; margin-top: 40px; letter-spacing: 3px;">
+        SYSTEM Stable
+    </div>
+
+</body>
+</html>
