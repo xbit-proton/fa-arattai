@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x0s // Compact Hub</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xbit-proton/fa-arattai@latest/arattai.css">
+
+    <style>
+        :root {
+            --accent: #007aff;
+            --bg: #ffffff;
+            --card: #f5f5f7;
+            --border: #e5e5e7;
+            --text: #1d1d1f;
+        }
+
+        body.dark-mode {
+            --bg: #000000;
+            --card: #0a0a0a;
+            --border: #1a1a1a;
+            --text: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(15px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Compact Toggle */
+        .mode-toggle {
+            display: flex;
+            padding: 3px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100px;
+            position: relative;
+        }
+
+        .toggle-btn {
+            width: 50%;
+            text-align: center;
+            font-size: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+            color: #888;
+        }
+
+        .toggle-btn.active { color: #fff; }
+
+        .slider {
+            position: absolute;
+            width: calc(50% - 3px);
+            height: calc(100% - 6px);
+            background: var(--accent);
+            border-radius: 50px;
+            left: 3px;
+        }
+
+        body.dark-mode .slider { transform: translateX(100%); }
+
+        /* Small Pill Grid */
+        .pill-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            max-width: 320px;
+        }
+
+        .pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+        }
+
+        .pill:hover {
+            border-color: var(--accent);
+            transform: translateY(-1px);
+        }
+
+        .pill:active { transform: scale(0.95); }
+
+        .pill i { font-size: 14px; }
+
+        .badge {
+            font-size: 7px;
+            letter-spacing: 2px;
+            color: var(--accent);
+            opacity: 0.5;
+            text-transform: uppercase;
+        }
+
+        .credits {
+            font-size: 9px;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bright-mode">
+
+    <div class="wrapper">
+        <div class="mode-toggle" onclick="toggleMode()">
+            <div class="slider"></div>
+            <div class="toggle-btn" id="t-br">Light</div>
+            <div class="toggle-btn" id="t-dr">Dark</div>
+        </div>
+
+        <div class="pill-grid">
+            <a href="#" class="pill"><i id="arattai-icon" class="fa-arattai"></i> Arattai</a>
+            <a href="#" class="pill"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="pill"><i class="fa-brands fa-x-twitter"></i> X</a>
+            <a href="#" class="pill"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+
+        <div class="badge">Architecture.x0s.v3</div>
+        
+        <div class="credits">
+            Design by <b>#pruthvi graphics</b>
+        </div>
+    </div>
+
+    <script>
+        function toggleMode() {
+            const isDark = document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('arattai-icon');
+            const b = document.getElementById('t-br');
+            const d = document.getElementById('t-dr');
+
+            if (isDark) {
+                icon.className = 'fa-arattai fa-arattai-white';
+                d.classList.add('active');
+                b.classList.remove('active');
+            } else {
+                icon.className = 'fa-arattai';
+                b.classList.add('active');
+                d.classList.remove('active');
+            }
+        }
+        document.getElementById('t-br').classList.add('active');
+    </script>
+</body>
+</html>
