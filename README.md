@@ -1,6 +1,6 @@
 # fa-arattai
 
-A high-performance icon library for the Arattai logo, optimized for **x0s** interfaces.
+A high-performance icon library for the Arattai logo, created to help my friends and design credits to pruthvi graphics Ranibennur for creating defined quality like fa-brands.
 
 ## 🛠 Setup
 Add this to your HTML `<head>`:
