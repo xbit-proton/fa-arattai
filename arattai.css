@@ -1,5 +1,5 @@
 /* * fa-arattai v1.2.0 
- * x0s ecosystem // technical icon distribution
+ * x0s ecosystem // final distribution
  */
 
 .fa-arattai {
@@ -14,16 +14,16 @@
     background-position: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* DEFAULT: Using your specific Blue PNG file */
+    /* BRIGHT MODE / DEFAULT: Use your real blue file */
     background-image: url('arattai-logo(standard).png');
 }
 
-/* WHITE MODE: Swaps to your White PNG file */
+/* DARK MODE: Use the white file */
 .fa-arattai-white {
     background-image: url('arattai-logo.png') !important;
 }
 
-/* GLOW MODE: Original Blue with technical aura */
+/* GLOW STATE */
 .fa-arattai-glow {
     background-image: url('arattai-logo(standard).png');
     filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.6));
